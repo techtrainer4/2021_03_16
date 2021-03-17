@@ -1,0 +1,135 @@
+#Primitive Data Types 
+#Strings, Integers, FLoats
+name = "Charlie"
+surname = "Brown"
+whole_name = name + " " + surname
+print(whole_name)
+last_first = surname + "," + name
+print(last_first)
+Age = 32 #Charlie Brown is 32.
+print(name + " " + surname + " is " + str(Age) + ".")
+print("{} {} is {}.".format(name,surname,Age))
+
+name = "Charlie"
+surname = "Brown"
+age = 33
+pet = "cat"  #ex. "dog" or "cat" or "parrot"
+pet_name = "Wiggles" #ex. "Mr. Stripes"
+res = "Queens" #ex. "Manhattan","Brooklyn"
+
+#Charlie Brown is 45 and lives in Manhattan with his dog Rover. 
+print("{} {} is {} and lives in {} with his {} {}.".format(name,surname,age,res,pet,pet_name))
+
+# print("In 10 years, you will be {}.".format(age + 10))
+
+#User Defined Functions
+def Bill_Split():
+  amt = input("What is the total amount? ")
+  amt = float(amt)
+  ppl = input("How many people are there? ")
+  ppl = float(ppl)
+  share = amt / ppl
+  print("Each person pays ${:.2f}.".format(share))
+
+#Bill_Split()
+def Cube(x):
+  c = x * x * x
+  return c
+
+_3cubed = Cube(3)
+_5cubed = Cube(5)
+#print(_3cubed, _5cubed)
+
+#Conditional Statements
+age = 9
+movie_type = "HELLO" #PG13, G, PG
+if movie_type == "R":
+  if age >= 17:
+    print("You can watch this movie")
+  else:
+    print("You are too young to watch this.")
+elif movie_type == "G":
+  print("Anyone can watch this.")
+elif movie_type == "PG13":
+  if age >= 13:
+    print("You can watch this.")
+  else:
+    print("You are too young to watch this.")
+elif movie_type == "PG":
+  if age < 13:
+    print("You need a parent.")
+  else:
+    print("You can watch this.")
+else:
+  print("That's not a real rating.")
+
+  ages = [78,79,80,81]
+band.append("bob")
+print(band)
+band.insert(0,"gary")
+band.remove("gary")
+band.remove("bob")
+band.pop(0)
+print(band)
+garys = ["gary","gary","gary"]
+garys.remove("gary")
+print(garys)
+mylist = [342,"cat",True,44,"dog"]
+band[:2]
+
+for boy in band:
+  print(boy + " is a Beatle.")
+nums = [1,2,3,4,5]
+squares = []
+for n in nums:
+  squares.append(n*n)
+#List Comprehension
+squares2 = [n*n for n in nums]
+band_correct = []
+for boy in band:
+  band_correct.append(boy.title())
+print(band_correct)
+band2 = [b.title() for b in band]
+print(band2)
+del band_correct
+band = [b.title() for b in band]
+print(band)
+
+# foods = ["italian","japanese","korean","mexican"]
+# my_favs = [] 
+
+# #print("carat".startswith("c"))
+# print("CAT".lower().startswith("c"))
+
+
+# for f in foods:
+#   like = input("Do you like {}?".format(f))
+#   if like.lower().startswith("y"):
+#     my_favs.append(f)
+# print(my_favs)
+
+# answer = input("Do you want a free oil change with your car wash?")
+# if answer.lower()[0] in ["y","n"]:
+#   print("That's an acceptable answer.")
+# else:
+#   print("Try again. I don't understand you.")
+
+friends = ["peggie","bob","JaY","john","Rachel","rIchard","becca","tom","byron","henry"] #write 10 names in here
+#create a new list with all names that start with R
+#all names that start with J
+all_js = [] 
+all_rs = [] 
+
+for f in friends:
+  if f.lower().startswith("j"):
+    all_js.append(f.title())
+  elif f.lower().startswith("r"):
+    all_rs.append(f.title()) 
+print(all_js)
+print(all_rs)   
+
+j_or_r = [] 
+for f in friends:
+  if f.lower()[0] in ["j","r"]:
+    j_or_r.append(f.title())
+print(j_or_r)
